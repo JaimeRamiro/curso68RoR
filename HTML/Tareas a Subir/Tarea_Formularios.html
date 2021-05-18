@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <!--Cuando los usuarios necesitan incorporar un texto corto, como una dirección de email o un nombre.
+            El tipo de input apropiado acá es text.-->
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <br>
+    <br>
+
+    <!--Un campo de contraseña (password)
+    El tipo de input aquí es password.-->
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="pass">
+    <br>
+    <br>
+    <!--Cuando el usuario puede elegir una de varias opciones. Un buen ejemplo es un selector de género.
+    El input apropiado acá serían los botones radio.-->
+
+    <label for="masculino">Masculino:</label>
+    <input type="radio" id="masculino" name="genero" value="masculino">
+    <label for="femenino">Femenino:</label>
+    <input type="radio" id="femenino" name="genero" value="femenino">
+    <label for="prefiero-no-decir">Prefiero no decir:</label>
+    <input type="radio" id="prefiero-no-decir" name="genero" value="prefiero-no-decir">
+    <br>
+    <br>
+    <!--Otra opción es un menú desplegable que usa las etiquetas <select> y <option>.-->
+
+    <select name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="prefiero-no-decir">Prefiero no decir</option>
+        </select>
+    <br>
+    <br>
+    <!--Cuando los usuarios pueden escoger entre múltiples opciones, como sus 3 colores favoritos entre 5 alternativas.
+        El input apropiado acá es checkboxes.-->
+
+    <label for="azul">Azul</label>
+    <input type="checkbox" id="azul" name="color" value="azul">
+    <label for="verde">Verde</label>
+    <input type="checkbox" id="verde" name="color" value="verde">
+    <label for="rojo">Rojo</label>
+    <input type="checkbox" id="rojo" name="color" value="rojo">
+    <label for="negro">Negro</label>
+    <input type="checkbox" id="negro" name="color" value="negro">
+    <label for="morado">Morado</label>
+    <input type="checkbox" id="morado" name="color" value="morado">
+    <br>
+    <br>
+    <!--Cuando el usuario quiere ingresar un texto más largo. Puede ser utilizado para comentar en foros o para descripciones 
+    de perfil. En este caso usaremos la etiqueta <textarea>.-->
+
+    <textarea name="description">
+</textarea>
+    <br>
+    <br>
+    <!--Cuando un formulario debe enviar el input de más de un usuario
+El tipo de input hidden es similar a los campos de texto, con la diferencia de que no se muestra en la página y los usuarios
+ no pueden agregar nada en ellos. Esto es útil para la autenticación back-end y pasar datos.-->
+
+    <input type="hidden" name="id" value="7">
+    <br>
+    <br>
+    <!--para crear un botón de enviar (submit) El input apropiado acá es submit.-->
+
+    <input type="submit" value="Enviar">
+    <br>
+    <br>
+
+    <!--Veamos un ejemplo de formulario de registro completo:-->
+
+    <form action="process.php" method="post">
+        <p>Por favor regístrese</p>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <p>Selecciona tu género:</p>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+
+        <label for="femenino">Female</label>
+        <input type="radio" id="femenino" name="genero" value="femenino">
+
+        <label for="decline">Prefiero no decir</label>
+        <input type="radio" id="prefiero-no-decir" name="genero" value="prefiero-no-decir">
+
+        <p>Selecciona 3 de tus colores favoritos:</p>
+        <label for="azul">Azul</label>
+        <input type="checkbox" id="azul" name="color" value="azul">
+
+        <label for="verde">Verde</label>
+        <input type="checkbox" id="verde" name="color" value="verde">
+
+        <label for="rojo">Rojo</label>
+        <input type="checkbox" id="rojo" name="color" value="rojo">
+
+        <label for="negro">Negro</label>
+        <input type="checkbox" id="negro" name="color" value="negro">
+
+        <label for="morado">Morado</label>
+        <input type="checkbox" id="morado" name="color" value="morado">
+
+        <p>Escribe unas palabras sobre ti mismo:</p>
+        <textarea name="descripcion"></textarea>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password">
+        <label for="pw_confirm">Confirmación de Contraseña:</label>
+        <input type="password" id="pw_confirm" name="password_confirmacion">
+
+        <input type="submit" value="Presiona aquí para registrarte">
+    </form>
+</body>
+
+</html>
