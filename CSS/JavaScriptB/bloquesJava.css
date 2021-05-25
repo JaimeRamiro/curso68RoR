@@ -5,47 +5,39 @@
     padding: 0px;
 }
 
-#wrapper {
+#base_fondo {
     width: 950px;
-    background-color: silver;
+    background-color: rgb(86, 63, 177);
     margin: 0px auto;
     padding: 10px;
 }
 
-#header {
-    min-height: 150px;
-    background-color: green;
+#encabezado {
+    min-height: 50px;
+    background-color: rgb(163, 29, 29);
 }
 
-#navigation {
+#navegacion {
     min-height: 300px;
     width: 200px;
-    background-color: blue;
+    background-color: rgb(66, 66, 197);
     display: inline-block;
     margin: 10px 0px 0px 4px;
 }
 
-#main_content {
+#contentenido_principal {
     min-height: 400px;
     width: 705px;
-    background-color: red;
+    background-color: rgb(6, 10, 43);
     padding: 7px;
     margin: 10px;
     display: inline-block;
     vertical-align: top;
 }
 
-.subcontents {
-    min-height: 200px;
-    width: 210px;
-    background-color: yellow;
-    margin: 10px;
-    display: inline-block;
-}
-
-#advertisement {
+#publicidad {
     min-height: 120px;
     width: 680px;
-    background-color: purple;
+    background-color: silver;
     margin: 10px;
 }
