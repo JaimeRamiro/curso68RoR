@@ -1,0 +1,70 @@
+/*CSS reset settings here*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#base_fondo {
+    background-color: rgb(27, 51, 93);
+    width: 970px;
+    height: 750px;
+    padding: 10px;
+}
+
+#encabezado {
+    background-color: rgb(207, 48, 54);
+    color: #C1D1D3;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#navegacion {
+    background-color: rgb(41, 125, 140);
+    color: rgb(93, 200, 206);
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 350px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#contenido_principal {
+    background-color: rgb(14, 24, 34);
+    color: rgb(194, 214, 235);
+    display: inline-block;
+    width: 680px;
+    height: 600px;
+    padding: 10px;
+}
+
+#publicidad {
+    background-color: rgb(129, 126, 129);
+    color: white;
+    height: 20px;
+    margin-top: 15px;
+    padding: 15px;
+    width: 95%;
+}
+
+#encabezado,
+#navegacion,
+#contenido_principal,
+#publicidad {
+    border-radius: 10px;
+}
+
+.colores2 {
+    color: #6fb2db
+}
+
+ul {
+    padding: 20px;
+}
+
+li span {
+    font-weight: bold;
+    color: #303db2;
+}

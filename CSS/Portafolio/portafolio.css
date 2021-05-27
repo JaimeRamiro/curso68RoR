@@ -1,0 +1,111 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 1px dashed red;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#header {
+    padding: 10px 0px;
+    background-color: rgb(230, 230, 230);
+}
+
+#header h1 {
+    display: inline-block;
+    width: 400px;
+    margin-left: 20px;
+}
+
+#header p {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
+    width: 520px;
+    text-align: right;
+    font-size: 20px;
+}
+
+#main {
+    background-color: rgb(41, 11, 11);
+    padding: 20px;
+}
+
+#about {
+    margin-bottom: 20px;
+}
+
+#about img {
+    height: 250px;
+    border: 3px solid gray;
+}
+
+#about div {
+    display: inline-block;
+    vertical-align: top;
+    width: 540px;
+    height: 256 px;
+    margin-left: 28px;
+    background-color: white;
+}
+
+#about div h2,
+#projects div h3,
+#projects div h4 {
+    padding: 4px 10px;
+    background-color: rgb(136, 136, 136);
+    color: white;
+}
+
+#about div p {
+    padding: 10px;
+}
+
+#about div a {
+    display: block;
+    padding: 10px;
+}
+
+#projects div {
+    display: inline-block;
+    vertical-align: top;
+    width: 295px;
+}
+
+#projects div p {
+    background-color: white;
+    margin-top: -6px;
+    padding: 6px;
+    height: 140px;
+}
+
+#projects div button {
+    background-color: teal;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: slategray;
+    margin: 20px;
+    margin-left: 110px;
+}
+
+.fotos {
+    width: 45px;
+    height: auto;
+    margin: 4px;
+}
+
+.ancho {
+    width: 295px;
+}
+
+.lamode {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+}
