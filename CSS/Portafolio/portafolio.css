@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    outline: 1px dashed red;
+    /*outline: 1px dashed red;*/
     font-family: sans-serif;
 }
 
@@ -33,31 +33,33 @@
 #main {
     background-color: rgb(41, 11, 11);
     padding: 20px;
+    background-image: radial-gradient(pink, rgb(41, 11, 11));
 }
 
 #about {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 #about img {
-    height: 250px;
+    height: 238px;
     border: 3px solid gray;
 }
 
 #about div {
     display: inline-block;
     vertical-align: top;
-    width: 540px;
+    width: 559px;
     height: 256 px;
     margin-left: 28px;
     background-color: white;
+    background-image: linear-gradient(to right, white, pink);
 }
 
 #about div h2,
 #projects div h3,
 #projects div h4 {
     padding: 4px 10px;
-    background-color: rgb(136, 136, 136);
+    background-image: linear-gradient(black, silver);
     color: white;
 }
 
@@ -73,7 +75,7 @@
 #projects div {
     display: inline-block;
     vertical-align: top;
-    width: 295px;
+    width: 296px;
 }
 
 #projects div p {
@@ -81,17 +83,18 @@
     margin-top: -6px;
     padding: 6px;
     height: 140px;
+    text-align: center;
 }
 
-#projects div button {
+.boton {
     background-color: teal;
     padding: 5px;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid black;
     box-shadow: slategray;
     margin: 20px;
-    margin-left: 110px;
+    margin-left: 100px;
 }
 
 .fotos {
@@ -106,6 +109,29 @@
 
 .lamode {
     display: inline-block;
-    vertical-align: top;
     margin: 10px;
+    background-image: linear-gradient(to right, white, pink);
+    height: 525;
+}
+
+#footer {
+    text-align: center;
+    color: silver;
+}
+
+.footer2 {
+    width: 450px;
+    height: auto;
+    margin-left: 280px;
+}
+
+.fotos2 {
+    width: 15px;
+    height: auto;
+    margin: 2px;
+    vertical-align: top;
+}
+
+.a {
+    color: silver;
 }
