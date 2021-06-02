@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script>
+        /*ejercicio 5*/
+
+        function encuentraElMayor(array) {
+            var numeroMayor = array[0]; //se inicializa para comparar el primer elemento del array
+            for (var i = 0; i < array.length; i++) {
+                if (numeroMayor < array[i]) { //si se cumple la condicion
+                    numeroMayor = array[i]; // se reemplaza el valor 
+                }
+            }
+
+            return numeroMayor;
+        }
+        console.log(encuentraElMayor([-3, -1, -5]));
+        console.log(encuentraElMayor([-3, 3, 5, 7]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

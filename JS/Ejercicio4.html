@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <script>
+        /* ejercicio 4*/
+        function iteraUnArray(array) {
+            //array.length -> tamaño del arreglo (3)
+            //array[array.length-1] (posicion 2), [1,2,5] 
+            var sumaArray = 0;
+            //for(var i = 0;i <= array.length-1 ;i++){
+            for (var i = 0; i < array.length; i++) { //i es utilizado para la posicion
+                sumaArray = sumaArray + array[i]; //array[i] ->obtener el elemento por posicion, dentro del arreglo
+            }
+            return sumaArray;
+        }
+
+        console.log("resultado 4.1: " + iteraUnArray([1, 2, 5]));
+        console.log("resultado 4.2: " + iteraUnArray([-5, 2, 5, 12]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

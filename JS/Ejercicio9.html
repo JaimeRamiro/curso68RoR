@@ -5,17 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascrip 68</title>
+    <title>Ejercicio 9</title>
     <script>
-        function a() {
-            for (var i = 0; i < 10; i++) {}
-            console.log(i);
+        /*ejercicio 9*/
+
+        function cuadrados(arr) {
+
+            for (var i = 0; i < arr.length; i++) {
+                arr[i] = Math.pow(arr[i], 2);
+            }
+            return arr
         }
+
+        console.log(cuadrados([1, 5, 10, -2]));
     </script>
 </head>
 
 <body>
-
 </body>
 
 </html>

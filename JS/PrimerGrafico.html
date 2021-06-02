@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Grafico</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('visualizacion', '1.0', {
+            'packages': ['corechart']
+        });
+        google.setOnLoadCallback('dibujar');
+
+        function dibujar() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'ciudad');
+            data.addColumn('number', 'visitas');
+            data.addRows(
+                [
+                    ['Cd Mexico', 700],
+                    ['Bogota', 651],
+                    ['Lima', 581],
+                    ['Caracas', 552],
+                    ['Montevideo', 357]
+
+                ]
+            );
+            var opciones = {
+                'title': 'Visitas de mi Web',
+                'width': 500,
+                'height': 300
+            };
+            var grafica = new google.visualization.PieChart(document.getElementById('charts'));
+            grafica.draw(grafica, opciones);
+        }
+    </script>
+</head>
+
+<body>
+    <div>"charts"</div>
+</body>
+
+</html>
