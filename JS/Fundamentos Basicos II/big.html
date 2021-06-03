@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>big</title>
+    <script>
+        /*ejercicio Tamaño Grande*/
+
+        function big(array) {
+            var temp = 0;
+            for (var i = 0; i < array.length; i++) {
+
+                temp = array[i];
+                if (array[i] > 0) {
+                    array[i] = "big"
+                }
+            }
+            return array
+        }
+        console.log(big([-1, 3, 5, -5]));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

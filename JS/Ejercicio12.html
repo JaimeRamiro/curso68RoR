@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercambia Valores</title>
+    <script>
+        /*ejercicio 12 Intercambia Valores*/
+
+        function intercambia(array) {
+            var temp = 0;
+            for (var i = 0; i < array.length / 2; i++) {
+                var temp = array[i];
+                array[i] = array[array.length - (1 + i)];
+                array[array.length - (1 + i)] = temp;
+            }
+            return array;
+        }
+
+        console.log(intercambia([1, 5, 10, -2]));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
