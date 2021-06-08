@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares e Impares</title>
+    <script>
+        /*ejercicio 6 Pares e Impares*/
+
+        function paresimpares(array) {
+            var pares = 0;
+            var impares = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % 2 != 0) {
+                    impares = impares + 1;
+                    pares = 0;
+                } else {
+                    pares = pares + 1;
+                    impares = 0;
+                }
+                if (impares == 3) {
+                    console.log("¡Qué imparcial!");
+                    impares = 0;
+                } else if (pares == 3) {
+                    console.log("¡Es para bien!");
+                    pares = 0;
+                }
+            }
+        }
+        paresimpares([1, 2, 3, 1, 1, 1, 5, 4, 7, 2, 2, 2, 1, 1, 1]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

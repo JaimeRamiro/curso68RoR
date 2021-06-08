@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrementa los Segundos</title>
+    <script>
+        /*ejercicio 7 Incrementa los Segundos*/
+
+        function incrementasegundos(array) {
+
+            for (var i = 1; i < array.length; i += 2) {
+                array[i] = array[i] + 1;
+            }
+            for (var i = 0; i < array.length; i++) {
+                console.log(array[i]);
+            }
+            return array;
+        }
+        console.log(incrementasegundos([2, 13, 3, 14, 5, 8]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

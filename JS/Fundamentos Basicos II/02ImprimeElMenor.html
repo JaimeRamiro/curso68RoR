@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script>
+        /*ejercicio 2 Imprime el Menor Devuelve el mayor*/
+
+        function ImprimeMenor(array) {
+            var menor = array[0];
+            var mayor = array[0];
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] < menor) {
+                    menor = array[i];
+                } else if (array[i] > mayor) {
+                    mayor = array[i];
+                }
+            }
+            console.log(menor);
+            return mayor;
+        }
+        console.log(ImprimeMenor([-1, 3, 5, -5]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

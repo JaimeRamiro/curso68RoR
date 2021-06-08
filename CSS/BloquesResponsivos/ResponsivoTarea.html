@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsivo</title>
+    <style>
+        /*
+        Teléfono	Ancho menor o igual a 480px
+        Tablet	Ancho entre  481px y 1023px
+        Desktop	Ancho mayor o igual a 1024px
+        */
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #principal {
+            background-color: coral;
+        }
+        /* Telefono*/
+        
+        @media only screen and (max-width: 480px) {
+            /* we will set these stylings only if the device is a screen with a width of 480px or less */
+            #principal {
+                background-color: aquamarine;
+            }
+            #tablet,
+            #desktop {
+                display: none;
+                /*none: se ocultara*/
+            }
+        }
+        /*tablet*/
+        
+        @media only screen and (min-width:481px) and (max-width: 1023px) {
+            /* we will set these stylings only if the device is a screen with a width of 480px or less */
+            #principal {
+                background-color: green;
+            }
+            #telefono,
+            #desktop {
+                display: none;
+                /*none: se ocultara*/
+            }
+        }
+        /*desktop*/
+        
+        @media only screen and (min-width: 1024px) {
+            #principal {
+                background-color: aqua;
+            }
+            #telefono,
+            #tablet {
+                display: none;
+                /*none: se ocultara*/
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="principal">
+        <div>
+            <h1>@Media Querys</h1>
+        </div>
+        <div>
+            <p>elrfgowierughflieruwh fiuweh eiruh fiuerhfiuer piuhfgpiuepfguierwghfoiuwfgh</p>
+        </div>
+        <div>
+            <p id="telefono">Teléfono Ancho menor o igual a 480px </p>
+            <p id="tablet">Tablet Ancho entre 481px y 1023px </p>
+            <p id="desktop">Desktop Ancho mayor o igual a 1024px</p>
+        </div>
+    </div>
+</body>
+
+</html>
