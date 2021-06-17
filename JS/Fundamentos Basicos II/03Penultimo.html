@@ -9,14 +9,14 @@
 
     <script>
         function penultimo(array) {
-            console.log(array[array.length - 2]);
+            console.log("El Penúltimo valor es: " + array[array.length - 2]);
             for (var i = 0; i < array.length; i++) {
                 if (array[i] % 2 != 0) {
-                    return array[i];
+                    return "El Primer Valor Impar es: " + array[i];
                 }
             }
         }
-        console.log(penultimo([-1, 3, 5, -5]));
+        console.log(penultimo([5, 3, -1, 4, -5]));
     </script>
 </head>
 

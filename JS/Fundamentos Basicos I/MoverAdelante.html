@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover Adelante</title>
+    <script>
+        function moveradelante(array) {
+            for (var i = 0; i < array.length - 1; i++) {
+                array[i] = array[i + 1];
+            }
+            array[array.length - 1] = 0;
+            console.log(array);
+        }
+        moveradelante([1, 2, 3, -5, 8]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
