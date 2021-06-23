@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Clima 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function() {
+                var q = name
+                $.get("https://api.openweathermap.org/data/2.5/weather?'+name+',cl&APPID=7d75c363b293f31f06a0dae05a5b7c18", function(res) {
+                    console.dir(res);
+                }, 'json');
+                // don't forget to return false so the page doesn't refresh
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>The input element</h1>
+
+        <form action="/action_page.php">
+            <label for="fname">Nombre de Ciudad:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>Click the "Submit" button and the form-data will be sent to a page on the server called "action_page.php".</p>
+
+
+    </div>
+</body>
+
+</html>

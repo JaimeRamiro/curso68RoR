@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+
+            $('button').click(function() {
+                var ciudad = $('#name').val(); //capturar el valor del input
+                // console.log(ciudad);
+
+                //consumo de api
+                $.get("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&APPID=7d75c363b293f31f06a0dae05a5b7c18", function(respuesta) {
+                    console.dir(respuesta);
+                    console.log(respuesta.name);
+                    var celcius = Math.round(respuesta.main.temp - 273.15);
+                    $("#respuestas").html('<h3>Ciudad: ' + respuesta.name + '</h3>');
+                    $("#respuestas").append('<p>Coordenadas Longitud: ' + respuesta.coord.lon + '</p>');
+                    $("#respuestas").append('<p>Coordenadas Latitud: ' + respuesta.coord.lat + '</p>');
+                    $("#respuestas").append('<p>Temperatura Celcius:' + celcius + '</p>');
+                    //name; coord.lon; coord.lat;main.temp
+
+                }, "json");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <label for="name">Ingrese Nombre Ciudad :</label>
+        <input id="name" type="text">
+        <button>Enviar</button>
+        <div id="respuestas">
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
