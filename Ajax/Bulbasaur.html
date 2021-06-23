@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gotta Catch'em All</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("https://pokeapi.co/api/v2/pokemon/1/", function(respuesta) {
+                for (var i = 0; i < respuesta.types.length; i++) {
+                    console.log(respuesta.types[i].type.name);
+
+                }
+
+            }, "json");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="bulbasaur">
+    </div>
+</body>
+
+</html>
