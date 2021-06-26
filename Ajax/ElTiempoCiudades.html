@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $(document).keydown(function(e) {
+                if (e.keyCode == 13) {
+                    validarIngreso();
+                }
+            });
+
+            $('#lupa').click(function() {
+                validarIngreso();
+            });
+
+            function validarIngreso() {
+                var ciudad = $('#txtCiudad').val();
+                if (ciudad.localeCompare("") == 0) {
+                    $('#respuesta').html("<h2>Ingrese el nombre de una ciudad</h2>");
+                } else {
+                    buscarEstadoDelTiempo(ciudad);
+
+                }
+            }
+
+            function buscarEstadoDelTiempo(ciudad) {
+                var temperatura = 0;
+                $.get("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&APPID=63fc41006e26398f03bdf9037b2bc447", function(datosClimaticos) {
+
+                    $('#respuesta').html("<h2>" + datosClimaticos.name + ", " + datosClimaticos.sys.country + "</h2>");
+                    $('#respuesta').append("<p> Condición: " + datosClimaticos.weather[0].description + "</p>");
+
+                    temperatura = Math.round(datosClimaticos.main.temp_max - 273.15);
+
+                    $('#respuesta').append("<p> Temperatura: " + temperatura + "ºC</p>");
+                    $('#respuesta').append("<p> Coordenadas: " + datosClimaticos.coord.lat + "," + datosClimaticos.coord.lon + "</p>");
+
+                    $('#txtCiudad').val("");
+
+                    initMap(datosClimaticos.coord.lat, datosClimaticos.coord.lon);
+                });
+            }
+
+            function initMap(latitud, longuitud) {
+                // The location of Uluru
+                const uluru = {
+                    lat: latitud,
+                    lng: longuitud
+                };
+                // The map, centered at Uluru
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 8,
+                    center: uluru,
+                });
+                // The marker, positioned at Uluru
+                const marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                });
+            }
+        });
+    </script>
+</head>
+<style>
+    * {
+        /*border: 1px solid red;*/
+        margin: 0 auto;
+        font-family: 'Prompt', sans-serif;
+    }
+    
+    #map {
+        height: 279px;
+        width: 356px;
+    }
+    
+    #respuesta {
+        color: #ffffff;
+        height: 200px;
+        width: 320px;
+        margin-top: 30px;
+    }
+    
+    body {
+        /* background-color: #ca0000d4;*/
+        background-color: #ca2e00e6;
+    }
+    
+    #txtCiudad {
+        height: 47px;
+        width: 248px;
+        margin-left: 22px;
+        border-color: #39a9f9;
+        font-size: 26px;
+        color: #969696;
+        border: 0px;
+        vertical-align: top;
+        outline: none;
+    }
+    
+    #inputDeBusqueda {
+        border-radius: 27px;
+        background-color: #ffffff;
+        width: 338px;
+        text-align: center;
+    }
+    
+    #submit {
+        background-color: unset;
+        color: white;
+        border: 0px;
+        position: relative;
+        top: 7px;
+        left: 1px;
+        padding: 0px;
+    }
+    
+    #tormenta {
+        border-radius: 18px;
+        margin-bottom: 15px;
+        height: 167px;
+        width: 341px;
+    }
+    
+    #submit:hover {
+        filter: brightness(120%);
+    }
+    
+    #lupa {
+        height: 32px;
+    }
+    
+    #titulo {
+        color: #ffffff;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        font-size: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+    
+    #titulo::first-letter {
+        color: #f3edcc;
+    }
+</style>
+
+<body>
+    <!--<img id="tormenta" src="clima.gif" alt="tormenta" srcset="">-->
+    <p id="titulo">Weather</p>
+    <div id="inputDeBusqueda">
+        <input type="text" id="txtCiudad" placeholder="Ciudad..." />
+        <button id="submit"><img id="lupa" src="lupa.png" alt="Buscar"></button>
+    </div>
+    <div id="respuesta"></div>
+    <div id="map"></div>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWJLDorLWceSo8w2iapF6DycZu05vUnNs&callback=initMap&libraries=&v=weekly" async></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWJLDorLWceSo8w2iapF6DycZu05vUnNs&libraries=&v=weekly" async></script>
+</body>
+
+</html>
