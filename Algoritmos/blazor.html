@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div>
+        <input type="number" @bind-value="@A" /> +
+        <input type="number" @bind-value="@B" />
+        <button @onclick="Calculate">Calculate</button>
+    </div>
+    @if (Result != null) {
+    <div>
+        The sum of @A and @B is @Result
+    </div>
+    } @code { public int? A { get; set; } public int? B { get; set; } public int? Result { get; set; } void Calculate() { Result = A + B; } }
+</body>
+
+</html>
